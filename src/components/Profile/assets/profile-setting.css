@@ -1,0 +1,180 @@
+/* ###################### #################*/
+
+/* user-form */
+.setting-main {
+  position: relative;
+  color: white;
+  font-family: "Poppins";
+}
+.setting-main .form-c h1,
+.setting-main .form-u h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+.setting-main .form-u label {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(229, 232, 235);
+  font-family: "Poppins";
+}
+.setting-main .form-profile-setting {
+  display: block;
+  text-align: left;
+  position: relative;
+  top: 65px;
+  font-family: "Poppins";
+}
+
+.setting-main .form-u {
+  width: 70%;
+  margin: auto;
+}
+
+.setting-main #has2 {
+  margin: 1px 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.setting-main #has1 {
+  margin-bottom: 1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.setting-main .input-group {
+  display: block;
+  width: 400px;
+  height: 50px;
+  border: 0;
+  background-color: rgb(53, 56, 64);
+  border-radius: 10px;
+  position: relative;
+  font-size: 17px;
+  color: #a7b4c1;
+  margin: 20px 0;
+  font-family: "Poppins";
+  font-weight: 400;
+  padding: 0;
+  border: 1px solid rgb(21, 27, 34);
+}
+.setting-main textarea {
+  background-color: rgb(53, 56, 64);
+  resize: vertical;
+  width: 400px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  margin: 20px 0;
+  color: rgb(229, 232, 235);
+  padding: 10px 0 0 20px;
+  font-size: 17px;
+  font-family: "Poppins";
+  font-weight: 400;
+  border: 1px solid rgb(21, 27, 34);
+}
+.setting-main textarea:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.setting-main .input-group:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.setting-main .input-group .form-control {
+  position: absolute;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 3;
+  display: block;
+  color: rgb(229, 232, 235);
+  transition: top 0.1s ease-in-out;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.setting-main .input-group label {
+  position: absolute;
+  border: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 0 53px;
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+  cursor: text;
+}
+
+.setting-main .input-group input:focus + label,
+.setting-main .input-group input:not(:placeholder-shown) + label {
+  bottom: 20px;
+  font-size: 13px;
+}
+
+.setting-main .save-btn {
+  border: none;
+  outline: none;
+  background-color: rgb(32, 129, 226);
+  color: white;
+  margin: 25px 0;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.image_label {
+  margin-left: 10px;
+}
+.setting_image {
+  margin: 10px 0;
+}
+.banner_setting_img,
+.banner_setting_img img {
+  border-radius: 10px;
+}
+.banner_setting_img input {
+  border-radius: 10px;
+}
+.setting-main .banner-image {
+  margin-top: 20px;
+}
+
+.setting-main .preview-btn {
+  border: 1px solid grey;
+  outline: none;
+  background-color: rgb(32, 34, 37);
+  color: white;
+  width: 14rem;
+  height: 5rem;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  right: 120px;
+}
+.setting-main .prev-btn-img {
+  width: 25px;
+  margin: 5px;
+}
+/* user-form-end */
+
+.prev-btn-img {
+  width: 25px;
+  margin: 5px;
+}
+/* user-form-end */
+
+/* ##################################### */

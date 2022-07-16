@@ -1,0 +1,7 @@
+:root {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(32 34 37);
+  color: #fff;
+}

@@ -1,0 +1,147 @@
+.form-c {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 30px;
+  font-family: "Poppins";
+}
+form {
+  display: block;
+  text-align: left;
+}
+.form-c h1 {
+  margin: 50px 0;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 0px;
+  margin-bottom: 16px;
+  line-height: 110%;
+}
+.sub-head {
+  font-weight: 500;
+  font-size: 12px;
+  color: rgb(138, 147, 155);
+}
+.highlight {
+  color: #ff4b4b;
+}
+.head {
+  color: rgb(229, 232, 235);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nft-image:hover {
+  background-color: #0000003d;
+  cursor: pointer;
+}
+
+.nft-image-image {
+  margin-top: 40px;
+}
+.nft-image {
+  margin: 20px 0px;
+  position: relative;
+  cursor: pointer;
+  border: 3px dashed rgb(204, 204, 204);
+  border-radius: 10px;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 257px;
+  width: 350px;
+  padding: 5px;
+}
+.nft-image input[type="file"] {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+.img-uploaded {
+  max-height: 100%;
+  max-width: 100%;
+  /* object-fit: ; */
+}
+.nft-image img {
+  border: 0;
+}
+.input-group {
+  background-color: rgb(53, 56, 64);
+  border-radius: 10px;
+  border: 1px solid rgb(21, 27, 34);
+  display: flex;
+  color: rgb(138, 147, 155);
+  padding-left: 12px;
+  margin-top: 10px;
+}
+.input-group input[type="text"],
+input[type="number"] {
+  background-color: transparent;
+  border: none;
+  flex: 1 0 0%;
+  height: 48px;
+  outline: none;
+  padding: 0px 12px 0px 0px;
+  min-width: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.input-group input[type="text"]:focus,
+input[type="number"]:focus {
+  box-shadow: none;
+  background: transparent;
+  color: rgb(255, 255, 255);
+}
+
+.des-group {
+  margin: 20px 0;
+}
+
+textarea {
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  resize: vertical;
+  border: 1px solid rgb(21, 27, 34);
+  background-color: rgb(53, 56, 64);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+hr {
+  padding: 0px;
+  margin: 30px 0px;
+  opacity: 0.2;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-image: initial;
+  border-top: 1px solid rgb(138, 147, 155);
+  color: rgb(138, 147, 155);
+  text-align: center;
+}
+
+.create-btn {
+  display: inline-flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  background-color: rgb(32, 129, 226);
+  border: 1px solid rgb(32, 129, 226);
+  color: rgb(255, 255, 255);
+}
+
+.create-btn-disabled {
+  background-color: rgb(116 186 255);
+  border: 1px solid rgb(0 0 0);
+  color: rgb(212 212 212);
+}

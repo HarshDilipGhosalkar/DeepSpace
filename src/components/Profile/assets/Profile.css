@@ -1,0 +1,131 @@
+.upper {
+  background-color: rgb(24, 27, 34);
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.upper img {
+  width: 100%;
+  height: 100%;
+}
+.upper input {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+.upper:hover {
+  background-color: black;
+  cursor: pointer;
+}
+.details {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.prof-img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background-color: rgb(38, 43, 47);
+  margin: 0 auto 15px auto;
+  margin-top: -64px;
+  border: 2px solid rgb(38, 43, 47);
+  align-items: center;
+  overflow: hidden;
+}
+.prof-img input {
+  cursor: pointer;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  opacity: 0;
+  position: relative;
+  top: -130px;
+  background-color: black;
+}
+.prof-img img {
+  object-fit: cover;
+  height: 130px;
+  width: 130px;
+  border-radius: 70%;
+}
+/* .prof-img img :hover{
+    ba
+  } */
+.user-details {
+  align-items: center;
+  text-align: center;
+  width: 550px;
+}
+.prof-img input:hover {
+  opacity: 50%;
+}
+
+.details .user-details p {
+  color: rgb(138, 147, 155);
+  font-weight: 500;
+  margin: 10px 0;
+  font-size: 17px;
+}
+.details .user-details p:hover {
+  color: white;
+}
+.details .user-details h1 {
+  color: white;
+  font-weight: 600;
+  margin: 10px 0;
+  font-size: 30px;
+}
+.address {
+  width: 30%;
+  padding: 5px 8px;
+  border: 1px solid rgb(21, 27, 34);
+  border-radius: 16px;
+  color: rgb(138, 147, 155);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  margin: auto;
+}
+
+.address:hover {
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  color: white;
+}
+.share__Icon,
+.settings__Icon {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: inline-flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 15px;
+  background-color: rgb(32, 34, 37);
+  border: 1px solid rgb(112, 122, 131);
+  color: rgb(229, 232, 235);
+}
+.share__Icon {
+  right: 85px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.other_profile_page {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  right: 50px;
+}
+.settings__Icon {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.icons {
+  height: 25px;
+}

@@ -1,0 +1,47 @@
+.option {
+  display: inline-block;
+  width: 100%;
+  margin-top: 25px;
+}
+.option .option_link {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(138, 147, 155);
+  text-decoration: none;
+  padding: 12px 40px;
+  position: relative;
+  background-color: transparent;
+  border: 0;
+}
+.option .active_ {
+  color: white;
+}
+.option .underline {
+  height: 3px;
+  width: 138px;
+  margin: 0px 40px;
+  color: white;
+  background-color: white;
+  border-radius: 10px;
+}
+.option_underline {
+  height: 3px;
+}
+/*show the hidden border on hover*/
+.option .option_link:hover::before {
+  transform: scaleX(1);
+}
+.option .option_link:hover {
+  color: white;
+}
+.menu {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 50px;
+  width: 700px;
+}
+.menu li {
+  list-style-type: none;
+}

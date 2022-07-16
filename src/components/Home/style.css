@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+/* user */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.main {
+  position: relative;
+  align-items: center;
+  height: 60rem;
+  background-color: rgb(32, 34, 37);
+}
+.head-container {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://lh3.googleusercontent.com/O3Zi9hd5QlOFeVWZuKCUgW8bMfbg5MJ_3ph2LALoZKuNxLB3SFKPxy1rCPViUErGNRrFm1FdIGmjpQJwmWk3Ti42jc3YjOhUjTSp=w600);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  /*  filter: blur(8px); */
+}
+.fading-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(32, 34, 37, 0.92);
+  background-image: linear-gradient(
+    to top,
+    rgba(32, 34, 37, 1),
+    rgba(32, 34, 37, 0)
+  );
+}
+.text-div {
+  width: 50%;
+  margin: 0px auto;
+}
+.text-area {
+  padding: 0px 40px 45px 40px;
+
+  text-align: left;
+}
+.text-div h1 {
+  color: white;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.text-div span {
+  max-width: 80px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: rgb(138, 147, 155);
+  font-weight: 400;
+}
+.banner-div {
+  height: 500px;
+  width: 50%;
+  margin: auto 0 auto 100px;
+}
+.nft-banner {
+  height: 95%;
+  width: 500px;
+  background-color: rgba(48, 51, 57);
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.btn-div {
+  margin-top: 40px;
+}
+#explore-btn {
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  background-color: rgb(32, 129, 226);
+  border: 1px solid rgb(32, 129, 226);
+  color: rgb(255, 255, 255);
+  margin-right: 20px;
+  width: 167px;
+}
+#create-btn {
+  width: 167px;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  background-color: rgb(53, 56, 64);
+  border: 1px solid rgb(21, 27, 34);
+  color: rgb(229, 232, 235);
+}
+
+.landing-img {
+  width: 100%;
+  height: 85%;
+
+  background-size: cover;
+  background-image: url(https://lh3.googleusercontent.com/O3Zi9hd5QlOFeVWZuKCUgW8bMfbg5MJ_3ph2LALoZKuNxLB3SFKPxy1rCPViUErGNRrFm1FdIGmjpQJwmWk3Ti42jc3YjOhUjTSp=w600);
+}
+.landing-img-details {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.landing-prof-img {
+  margin: 0 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(https://lh3.googleusercontent.com/O3Zi9hd5QlOFeVWZuKCUgW8bMfbg5MJ_3ph2LALoZKuNxLB3SFKPxy1rCPViUErGNRrFm1FdIGmjpQJwmWk3Ti42jc3YjOhUjTSp=w600);
+}
+.landing-prof-img-det .name {
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 5px;
+  text-align: left;
+}
+.landing-prof-img-det .user-name {
+  color: #3aa3f7;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 0;
+}

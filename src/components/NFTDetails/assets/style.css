@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.details-main {
+  color: white;
+  margin: 10px;
+}
+.detail-page__nft-image_section {
+  width: 40%;
+}
+.detail-page__nft-image {
+  border-radius: 10px;
+  border: 1px solid rgb(21, 27, 34);
+  overflow: hidden;
+  padding: 0;
+  margin: 15px 10px 15px 20px;
+}
+.nft-image-header {
+  display: flex;
+  font-weight: 500;
+  height: 42px;
+  width: 100%;
+  background: rgb(48, 51, 57);
+  margin: 0;
+}
+.eth-small {
+  height: 30px;
+  float: left;
+  width: 30px;
+  margin: 5px;
+}
+.nft-image-div {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.nft-image-div img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: initial;
+  margin: 0;
+  padding: 0;
+}
+.nft-item-details {
+  margin: 10px;
+  padding: 10px;
+  width: 52%;
+  font-family: Poppins, sans-serif;
+}
+.creator_details {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0;
+}
+.creator-name {
+  color: rgb(32, 129, 226);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+.nft-details-share {
+  display: inline-flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 5px;
+  background-color: rgb(32, 34, 37);
+  border: 1px solid rgb(112, 122, 131);
+  color: rgb(229, 232, 235);
+}
+
+.nft_name {
+  font-size: 30px;
+  font-weight: 600;
+  max-width: 100%;
+  margin: 0px;
+  width: 588px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.owner_name span {
+  margin: 10px 0;
+  color: rgb(138, 147, 155);
+  padding: 0;
+  font-size: 15px;
+}
+.owner_name a {
+  color: rgb(32, 129, 226);
+}
+.price_row {
+  border-radius: 10px;
+  border: 1px solid rgb(21, 27, 34);
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 0;
+}
+.created_on {
+  margin: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid rgb(21, 27, 34);
+  color: rgb(138, 147, 155);
+  padding: 20px;
+  background-color: rgb(38, 43, 47);
+  color: rgb(138, 147, 155);
+  font-weight: 400;
+  font-size: 16px;
+}
+.div_title {
+  font-family: "Poppins";
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+.detail_section {
+  margin: 15px 10px 15px 20px;
+}
+.div_content_text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-family: "Poppins";
+  color: rgb(229, 232, 235);
+  font-weight: 400;
+}
+.description_content {
+  color: rgb(196 187 187);
+}
+
+.price_div {
+  padding: 20px;
+  background-color: rgb(48, 51, 57);
+  margin: 0;
+}
+
+.price-input_detail {
+  max-width: 60%;
+}
+
+.price-header {
+  color: rgb(138, 147, 155);
+  font-size: 16px;
+}
+.assets-price-detail {
+  margin: 0px 0;
+  padding: 0;
+  display: inline;
+}
+.eth_icon {
+  filter: brightness(3);
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.eth_price {
+  font-size: 30px;
+  font-weight: 600;
+  color: inherit;
+  padding-right: 0;
+}
+.dollar_price {
+  color: rgb(138, 147, 155);
+  font-size: 17px;
+  padding: 0;
+}
+.wallet_icon {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.buy_now-btn {
+  display: inline-flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  background-color: rgb(32, 129, 226);
+  border: 1px solid rgb(32, 129, 226);
+  color: rgb(255, 255, 255);
+  width: 200px;
+  margin-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+.details-main .change_price-btn {
+  margin-top: 5px;
+  background-color: rgb(2 2 2 / 32%);
+  border: 1px solid rgb(21, 27, 34);
+  color: rgb(199 199 199);
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+  margin-right: 20px;
+}
+.remove-btn,
+.keep-btn {
+  cursor: pointer;
+  display: flex;
+  min-height: 50px;
+  padding: 10px 20px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(229 21 21 / 6%);
+  border-color: rgb(255 0 0 / 39%);
+  width: 345px;
+  color: rgb(229, 232, 235);
+  margin-left: calc(var(--bs-gutter-x) * 0.5);
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.keep-btn {
+  background-color: rgba(21, 178, 229, 0.06);
+  border-color: rgb(21, 178, 229);
+}
+
+.change-price-row {
+  padding: 0 0 15px 20px;
+}
+.description_image {
+  height: 20px;
+  width: 40px;
+  margin-top: 2px;
+}
+.notForSale {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Poppins";
+  color: #ff3d3d;
+  margin-top: 10px;
+  margin-left: 10px;
+}
