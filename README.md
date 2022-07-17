@@ -161,5 +161,6 @@ npm start
   ## Authors
   - Harsh Ghosalkar - [HarshDilipGhosalkar](https://github.com/HarshDilipGhosalkar)
   - Jhenil Parihar - [JhenilParihar](https://github.com/jhenilparihar)
+  - Dev Jobalia - [DevJobalia]
 ## License
 This project is licensed under the MIT
