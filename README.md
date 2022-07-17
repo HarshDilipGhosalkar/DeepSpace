@@ -57,13 +57,13 @@
   - You can edit your profile by going to the profile Setting page.
  
  <p align="center">
- <img height=350px  src="./images/profile2.png" >
+ <img height=350px  src="./images/profile.gif" >
 </p>  
   
   - Landing page.
  
  <p align="center">
- <img height=350px  src="./images/landing.png" >
+ <img height=350px  src="./images/landing.gif" >
 </p> 
   
   
@@ -78,26 +78,26 @@
 - Create page.
       - User's can create their Nft's by going to the create section. They can upload their artwork , give it name, set appropriate price and description.
  <p align="center">
- <img height=350px  src="./images/create.png" >
+ <img height=350px  src="./images/create.gif" >
 </p> 
 - Explore page.
     - User's can Explore all the Nft's that have been minted by all users on our site. On the explore page user will get some filter options like recently minted or getting Nft's between specific price range(some filters are yet to be added still working on it).
  <p align="center">
- <img height=350px  src="./images/explore.png" >
+ <img height=350px  src="./images/explore.gif" >
 </p> 
 - Nft Details page.
     - User's can view details about a particular Nft by clicking on it(nft info includes: Nft image, Creator, Current Owner,Previous Owner,Buy Option,if owner[then keep for sale/remove from sale option and change price option],description).
  <p align="center">
- <img height=350px  src="./images/nft-details .png" >
+ <img height=350px  src="./images/nft details.gif" >
 </p> 
 - Buy Nft by clickinh on buy button
  <p align="center">
- <img height=350px  src="./images/buy.png" >
+ <img height=350px  src="./images/buy.gif" >
 </p> 
   - Query page.
     - User's can Query details about a particular Nft by the Id of it ,user can get address of the owner an csn get metadata about a particular nft by using its Id.
  <p align="center">
- <img height=350px  src="./images/query.png" >
+ <img height=350px  src="./images/query.gif" >
 </p> 
 
 #
