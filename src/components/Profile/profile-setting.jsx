@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 import "./assets/profile-setting.css";
 import eye from "./assets/eye.svg";
-
-const ipfsClient = require("ipfs-http-client");
-const ipfs = ipfsClient({
-  host: "ipfs.infura.io",
-  port: 5001,
-  protocol: "https",
-});
+import { Buffer } from 'buffer';
+// const ipfsClient = require("ipfs-http-client");
+// const ipfs = ipfsClient({
+//   host: "ipfs.infura.io",
+//   port: 5001,
+//   protocol: "https",
+// });
 
 class Settings extends Component {
   constructor(props) {
@@ -23,14 +23,58 @@ class Settings extends Component {
       imageIsUpload: false,
     };
   }
+  uploadFileToIPFS = async (fileBlob) => {
+    const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDE5NzkzNUM4NUQxODZmNEJCN2NlN2U1RjhGYjY4NWQ4NUJlY0ZkREEiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY3NjE5OTY3NzU0MywibmFtZSI6ImhhcnNoQDIzMDQifQ.gEWeVVohValCGdXRyGorzcYkc0umfpjcJOsPJxDMkQU";
+
+    var config = {
+      method: "post",
+      url: "https://api.nft.storage/upload",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "image/jpeg",
+      },
+      data: fileBlob,
+    };
+
+    const fileUploadResponse = await axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        return response.data;
+      })
+      .catch(function (error) {
+        console.log(error);
+        return error;
+      });
+
+    return fileUploadResponse;
+  };
   onUpload = async (e) => {
     const file = e.target.files[0];
     try {
-      const added = await ipfs.add(file);
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
-      this.setState({ imageHash: url });
-      this.setState({ imageIsUpload: true });
-      console.log(url);
+      // const added = await ipfs.add(file);
+      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      
+      const reader = new window.FileReader();
+      reader.readAsArrayBuffer(file);
+      reader.onloadend = async () => {
+        window.Buffer = Buffer;
+        const res = Buffer(reader.result);
+        var b = Buffer.from(res);
+        let ab = b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength);
+        console.log(res);
+        console.log(b);
+        console.log(ab);
+  
+        const imageblob = new Blob([ab], { type: "image/jpg" });
+        // Upload image to IPFS
+        const imageUploadResponse = await this.uploadFileToIPFS(imageblob);
+        const imageIPFS = imageUploadResponse.value.cid;
+        const imageLink = `https://alchemy.mypinata.cloud/ipfs/${imageIPFS}/`;
+        this.setState({ imageHash: imageLink });
+        this.setState({ imageIsUpload: true });
+      }
+
+     
     } catch (error) {
       console.log("Error uploading file: ", error);
     }
@@ -38,11 +82,29 @@ class Settings extends Component {
   onUpload1 = async (e) => {
     const file = e.target.files[0];
     try {
-      const added = await ipfs.add(file);
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
-      this.setState({ bannerHash: url });
-      this.setState({ imageIsUpload: true });
-      console.log(url);
+      // const added = await ipfs.add(file);
+      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+
+      const reader = new window.FileReader();
+      reader.readAsArrayBuffer(file);
+      reader.onloadend = async () => {
+        window.Buffer = Buffer;
+        const res = Buffer(reader.result);
+        var b = Buffer.from(res);
+        let ab = b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength);
+        console.log(res);
+        console.log(b);
+        console.log(ab);
+  
+        const imageblob = new Blob([ab], { type: "image/jpg" });
+        // Upload image to IPFS
+        const imageUploadResponse = await this.uploadFileToIPFS(imageblob);
+        const imageIPFS = imageUploadResponse.value.cid;
+        const imageLink = `https://alchemy.mypinata.cloud/ipfs/${imageIPFS}/`;
+        this.setState({ bannerHash: imageLink });
+        this.setState({ imageIsUpload: true });
+      }
+      
     } catch (error) {
       console.log("Error uploading file: ", error);
     }
@@ -58,7 +120,6 @@ class Settings extends Component {
       "0"
     );
   };
-
   render() {
     return (
       <div class="setting-main main-u">

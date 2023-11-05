@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./style.css";
+import axios from "axios";
+import { Buffer } from 'buffer';
 
-const ipfsClient = require("ipfs-http-client");
-const ipfs = ipfsClient({
-  host: "ipfs.infura.io",
-  port: 5001,
-  protocol: "https",
-});
+// const ipfsClient = require("ipfs-http-client");
+// const ipfs = ipfsClient({
+//   host: "ipfs.infura.io",
+//   port: 5001,
+//   protocol: "https",
+// });
 
 class FormAndPreview extends Component {
   constructor(props) {
@@ -23,23 +25,66 @@ class FormAndPreview extends Component {
   componentDidMount = async () => {
     await this.props.setMintBtnTimer();
   };
+  uploadFileToIPFS = async (fileBlob) => {
+    const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDE5NzkzNUM4NUQxODZmNEJCN2NlN2U1RjhGYjY4NWQ4NUJlY0ZkREEiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY3NjE5OTY3NzU0MywibmFtZSI6ImhhcnNoQDIzMDQifQ.gEWeVVohValCGdXRyGorzcYkc0umfpjcJOsPJxDMkQU";
 
+    var config = {
+      method: "post",
+      url: "https://api.nft.storage/upload",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "image/jpeg",
+      },
+      data: fileBlob,
+    };
+
+    const fileUploadResponse = await axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+        return response.data;
+      })
+      .catch(function (error) {
+        console.log(error);
+        return error;
+      });
+
+    return fileUploadResponse;
+  };
   onUpload = async (e) => {
     const image = document.querySelector(".img-uploaded");
     const fileInput = document.querySelector(".img-fileInput");
 
     const file = e.target.files[0];
     try {
-      const added = await ipfs.add(file);
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+      // const added = await ipfs.add(file);
+      // const url = `https://ipfs.infura.io/ipfs/${added.path}`;
 
-      image.style.height = "100%";
+      const reader = new window.FileReader();
+      reader.readAsArrayBuffer(file);
+      reader.onloadend = async () => {
+        window.Buffer = Buffer;
+        const res = Buffer(reader.result);
+        var b = Buffer.from(res);
+        let ab = b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength);
+        console.log(res);
+        console.log(b);
+        console.log(ab);
+  
+        const imageblob = new Blob([ab], { type: "image/jpg" });
+        // Upload image to IPFS
+        const imageUploadResponse = await this.uploadFileToIPFS(imageblob);
+        const imageIPFS = imageUploadResponse.value.cid;
+        const imageLink = `https://alchemy.mypinata.cloud/ipfs/${imageIPFS}/`;
+
+        image.style.height = "100%";
       image.style.width = "100%";
       fileInput.style.opacity = "0";
 
-      this.setState({ fileUrl: url });
+      this.setState({ fileUrl: imageLink });
       this.setState({ imageIsUpload: true });
-      console.log(url);
+      }
+
+      
     } catch (error) {
       console.log("Error uploading file: ", error);
     }
@@ -55,6 +100,7 @@ class FormAndPreview extends Component {
       this.state.description
     );
   };
+
 
   render() {
     return (
